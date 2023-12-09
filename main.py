@@ -59,7 +59,7 @@ def receiveOnePing(icmpSocket, ID, timeout):
     elif timeInRecev > timeout or replyType == ICMP_Type_Overtime:
         return -3  # ttl overtime/timeout
     elif replyType == ICMP_Type_Unreachable:
-        return -11  # unreachable
+        return -11
     else:
         print("request over time")
         return -1
