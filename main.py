@@ -43,7 +43,7 @@ def receiveOnePing(icmpSocket, ID, timeout):
     if not whatReady[0]:
         return -1
     timeReceived = time.time()
-    # 2. Once received, record time of receipt, otherwise, handle a timeout
+
     recPacket, addr = icmpSocket.recvfrom(1024)
     # 3. Compare the time of receipt to time of sending, producing the total network delay
     byte_in_double = struct.calcsize("!d")
